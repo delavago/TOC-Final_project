@@ -8,7 +8,7 @@ let GreetingsScreen = (props: {onPressNext: Function}) => {
         <View style={styles.page_container}>
             <View style={styles.header_container}>
                 <Text style={styles.header_text}>Welcome!</Text>
-                <Text style={styles.sub_heading_text}>Proceed the next button below to proceed</Text>
+                <Text style={styles.sub_heading_text}>Press the next button below to proceed</Text>
             </View>
             <View style={styles.button_container}>
                 <LottieView source={require('../lottie/hi-wink.json')} autoPlay loop />
