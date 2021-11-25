@@ -4,7 +4,7 @@ import { COLORS } from '../res/colors';
 
 
 
-let ItemSelectionListScreen = () => {
+let ItemSelectionListScreen = (props:{onPressCheckout: Function}) => {
 
     let [items, setItems] = useState([
         {
@@ -141,6 +141,7 @@ let ItemSelectionListScreen = () => {
                                 }}>{`  $${totalPrice()}`}</Text>
                             </Text>
                             <TouchableOpacity
+                                onPress={()=>props.onPressCheckout()}
                                 disabled={cartItems.length < 0}
                                 style={{
                                     height: 50,

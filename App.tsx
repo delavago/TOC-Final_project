@@ -13,6 +13,7 @@ import { View } from 'react-native';
 import GreetingsScreen from './src/screen/GreetingScreen';
 import ItemSelectionListScreen from './src/screen/itemsSelectionList';
 import OptionsScreen from './src/screen/OptionsScreen';
+import ThankYouScreen from './src/screen/ThankYouScreen';
 import ToPharmacistScreen from './src/screen/toPharmasistScreen';
 
 
@@ -36,7 +37,11 @@ const App = () => {
       /> : null}
 
       {screen === 'itemList' ? <ItemSelectionListScreen
-        
+        onPressCheckout={()=>setScreen('thankYou')}
+      /> : null}
+
+      {screen === 'thankYou' ? <ThankYouScreen
+        onPressDone={() => setScreen("greetings")}
       /> : null}
     </View>
   );
